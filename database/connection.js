@@ -14,9 +14,7 @@ connection.connect((err) => {
     if (err) {
       console.error(`
       error connecting to db
-      host: ${process.env.DB_HOST},
-      port: ${process.env.DB_PORT}, 
-      user: ${process.env.DB_USER},
+      port: ${process.env.DB_PORT}
       `);
     } else {
       console.log('connected to db');

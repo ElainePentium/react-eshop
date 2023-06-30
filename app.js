@@ -4,7 +4,7 @@ var path = require('path');
 
 const express = require("express");
 const connection = require('./database/connection');
-const serverPort = process.env.APP_PORT || 8000;
+const serverPort = process.env.APP_PORT; // || 8000;
 
 // init the express app
 const app = express();
