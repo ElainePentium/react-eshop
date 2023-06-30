@@ -7,9 +7,12 @@ const serverPort = process.env.APP_PORT || 8000;
 // init the express app
 const app = express();
 app.use(express.json());
+const pathToFile = path.join(_dirname, 'client/build')
+app.use(express.static(pathToFile))
 
 // define the index route
 app.get('/', (req, res) => {
+    res.sendFile(path.join(pathToFile, 'index.html'))
     console.log('A new request just hit the API !');
     res.send('Hello dear API client :)');
 });
