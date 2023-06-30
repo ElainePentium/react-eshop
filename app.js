@@ -9,7 +9,7 @@ const serverPort = process.env.APP_PORT || 8000;
 // init the express app
 const app = express();
 app.use(express.json());
-const pathToFile = path.join(_dirname, 'client/build')
+const pathToFile = path.join(__dirname, 'client/build')
 app.use(express.static(pathToFile))
 
 // define the index route
